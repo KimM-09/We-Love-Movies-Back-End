@@ -12,15 +12,14 @@ router
 .get(controller.getTheaters)
 .all(methodNotAllowed)
 
+router
+.route("/:movieId")
+.get(controller.read)
+.all(methodNotAllowed);
 
 router
 .route("/")
 .get(controller.list)
-.all(methodNotAllowed);
-
-router
-.route("/:movieId")
-.get(controller.read)
 .all(methodNotAllowed);
 
 
